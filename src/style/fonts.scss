@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'NewYork';
+	src: url('../fonts/newyork/NewYork.woff2') format('woff2'),
+		url('../fonts/newyork/NewYork.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Aguila';
+	src: url('../fonts/aguila/Aguila-Thin.woff2') format('woff2'),
+		url('../fonts/aguila/Aguila-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+		url('../fonts/poppins/Poppins-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+		url('../fonts/poppins/Poppins-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins-Medium';
+	src: url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
+		url('../fonts/poppins/Poppins-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--font-primary: 'NewYork', serif;
+	--font-secondary: 'Aguila', sans-serif;
+	--font-tertiary: 'Poppins-Regular', 'Poppins-Bold', 'Poppins-Medium', sans-serif;
+}
