@@ -2,6 +2,7 @@
 	import '../style/index.scss';
 	import favicon from '$lib/assets/favicon.svg';
 	import Menu from '../components/Menu.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -19,6 +20,8 @@
 	<main>
 		{@render children?.()}
 	</main>
+
+	<Footer />
 </div>
 
 <style lang="scss">
@@ -50,7 +53,7 @@
 		);
 
 		height: 80px;
-		margin: 16px 0 32px 0;
+		margin: 8px 0 32px 0;
 		position: sticky;
 		top: 0;
 		left: 0;
