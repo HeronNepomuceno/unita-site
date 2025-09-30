@@ -52,8 +52,7 @@
 				abordagens holísticas para proporcionar resultados naturais e duradouros.
 			</p>
 			<p class="about-text">
-				Nossa missão é despertar a melhor versão de você, respeitando sua individualidade e
-				promovendo saúde, autoestima e bem-estar.
+				Nossa missão é oferecer serviços de estética e bem-estar em um ambiente acolhedor, promovendo a consciência do autocuidado para quem busca saúde de  forma integrada.
 			</p>
 			<div class="about-stats">
 				<div class="stat">
@@ -146,14 +145,14 @@
 					<span class="contact-icon">📍</span>
 					<div>
 						<h4>Endereço</h4>
-						<p>Rua Principal, 123 - Centro</p>
+						<p>Avenida Senador Area Leão, 1736 sala 4 - Zona Leste</p>
 					</div>
 				</div>
 				<div class="contact-item">
 					<span class="contact-icon">📞</span>
 					<div>
 						<h4>Telefone</h4>
-						<p>(86) 99999-9999</p>
+						<p>+55 (86) 99867-8703</p>
 					</div>
 				</div>
 				<div class="contact-item">
@@ -281,6 +280,7 @@
 	// Section Shared Styles
 	section {
 		padding: 3rem 1.5rem;
+		scroll-margin-top: 80px;
 	}
 
 	.section-header {
@@ -340,19 +340,6 @@
 		opacity: 0.7;
 		line-height: 1.6;
 		margin-bottom: 1rem;
-	}
-
-	.service-link {
-		font-family: var(--font-tertiary);
-		color: var(--primary);
-		font-weight: 500;
-		text-decoration: none;
-		display: inline-block;
-		transition: transform 0.3s ease;
-
-		&:hover {
-			transform: translateX(5px);
-		}
 	}
 
 	// About Section
