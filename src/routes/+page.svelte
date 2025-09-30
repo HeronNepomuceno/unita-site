@@ -60,7 +60,7 @@
 				<span class="highlight">beleza natural</span>
 			</h1>
 			<p class="hero-subtitle">
-				Tratamentos estéticos integrados para realçar sua essência única com saúde e bem-estar
+				Clínica de estética facial, corporal e terapias integrativas.
 			</p>
 			<div class="hero-actions">
 				<a href="#agendamento" class="btn-primary">Agendar Consulta</a>
@@ -74,26 +74,7 @@
 		</div>
 	</section>
 
-	<!-- Services Section -->
-	<section id="servicos" class="services">
-		<div class="section-header">
-			<h2 class="section-title">Nossos Serviços</h2>
-			<p class="section-subtitle">Cuidado personalizado para cada necessidade</p>
-		</div>
-
-		<div class="services-grid">
-			{#each services as service}
-				<div class="service-card">
-					<div class="service-icon">{service.icon}</div>
-					<h3 class="service-title">{service.title}</h3>
-					<p class="service-description">{service.description}</p>
-					<a href="#contato" class="service-link">Saiba mais →</a>
-				</div>
-			{/each}
-		</div>
-	</section>
-
-	<!-- About Section -->
+		<!-- About Section -->
 	<section id="sobre" class="about">
 		<div class="about-content">
 			<h2 class="section-title">Sobre a Unitá</h2>
@@ -124,6 +105,24 @@
 			<div class="image-placeholder">
 				<span>💎</span>
 			</div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section id="servicos" class="services">
+		<div class="section-header">
+			<h2 class="section-title">Nossos Serviços</h2>
+			<p class="section-subtitle">Cuidado personalizado para cada necessidade</p>
+		</div>
+
+		<div class="services-grid">
+			{#each services as service}
+				<div class="service-card">
+					<div class="service-icon">{service.icon}</div>
+					<h3 class="service-title">{service.title}</h3>
+					<p class="service-description">{service.description}</p>
+				</div>
+			{/each}
 		</div>
 	</section>
 
@@ -334,10 +333,6 @@
 	}
 
 	// Services Section
-	.services {
-		background: rgba(255, 255, 255, 0.5);
-	}
-
 	.services-grid {
 		display: grid;
 		gap: 1.5rem;
@@ -393,6 +388,7 @@
 
 	// About Section
 	.about {
+		background: rgba(255, 255, 255, 0.5);
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -564,7 +560,7 @@
 		}
 
 		.hero-subtitle {
-			font-size: 1.1rem;
+			font-size: 1.4rem;
 		}
 
 		.hero-actions {
