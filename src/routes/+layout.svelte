@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Menu from '../components/Menu.svelte';
 	import Footer from '../components/Footer.svelte';
+	import WhatsAppFAB from '../components/WhatsAppFAB.svelte';
 
 	let { children } = $props();
 </script>
@@ -22,6 +23,8 @@
 	</main>
 
 	<Footer />
+
+	<WhatsAppFAB />
 </div>
 
 <style lang="scss">
@@ -64,4 +67,3 @@
 		padding: 32px 16px;
 	}
 </style>
-
