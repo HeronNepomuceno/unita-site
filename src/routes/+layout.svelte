@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../style/index.scss';
-	import favicon from '$lib/assets/favicon.svg';
 	import Menu from '../components/Menu.svelte';
 	import Footer from '../components/Footer.svelte';
 	import WhatsAppFAB from '../components/WhatsAppFAB.svelte';
@@ -10,7 +9,6 @@
 
 <svelte:head>
 	<title>Unitá Estética e Saúde Integrativa</title>
-	<link rel="icon" href={favicon} />
 </svelte:head>
 
 <div id="root">
