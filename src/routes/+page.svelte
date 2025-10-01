@@ -37,9 +37,7 @@
 			</div>
 		</div>
 		<div class="hero-image">
-			<div class="image-placeholder">
-				<span>🌿</span>
-			</div>
+			<img class="image-placeholder" src="/banner4.jpg" alt="Unitá" />
 		</div>
 	</section>
 
@@ -70,9 +68,7 @@
 			</div>
 		</div>
 		<div class="about-image">
-			<div class="image-placeholder">
-				<span>💎</span>
-			</div>
+			<img class="image-placeholder" src="/logo.webp" alt="Unitá" />
 		</div>
 	</section>
 
@@ -104,9 +100,7 @@
 		<div class="gallery-grid">
 			{#each Array(6) as _, i}
 				<div class="gallery-item">
-					<div class="gallery-placeholder">
-						<span>📸</span>
-					</div>
+					<img class="gallery-placeholder" src={`/banner${i + 1}.jpg`} alt="Unitá" />
 				</div>
 			{/each}
 		</div>
@@ -170,6 +164,10 @@
 					</div>
 				</div>
 			</div>
+			<div class="map">
+				<iframe title="Localização Unitá" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.159276253622!2d-42.7830862!3d-5.0779198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e3bcdb8a7a003%3A0x1490d09546b34907!2sUnit%C3%A1-%20Est%C3%A9tica%20e%20Sa%C3%BAde%20Integrativa!5e0!3m2!1spt-BR!2sbr!4v1759277040521!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			
 		</div>
 	</section>
 </div>
@@ -425,6 +423,7 @@
 		justify-content: center;
 		font-size: 3rem;
 		transition: transform 0.3s ease;
+		object-fit: cover;
 
 		&:hover {
 			transform: scale(1.05);
@@ -507,6 +506,14 @@
 		font-family: var(--font-tertiary);
 		color: var(--secondary);
 		opacity: 0.7;
+	}
+
+
+	.map {
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		display: flex;
+		justify-content: center;
+		margin-top: 32px;
 	}
 
 	// Tablet
