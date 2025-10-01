@@ -26,21 +26,6 @@
 
 <footer class="footer">
 	<div class="footer-content">
-		<!-- Logo e Descrição -->
-		<div class="footer-section footer-brand">
-			<img src="/unita.png" alt="Logo Unitá" class="footer-logo" />
-			<p class="footer-description">
-				Estética e saúde integrativa para despertar sua melhor versão. Cuidado personalizado com
-				excelência e respeito à sua individualidade.
-			</p>
-			<div class="footer-social">
-				{#each socialMedia as social}
-					<a href={social.href} class="social-link" aria-label={social.name}>
-						<span class="social-icon">{social.icon}</span>
-					</a>
-				{/each}
-			</div>
-		</div>
 
 		<!-- Links Rápidos -->
 		<div class="footer-section">
@@ -117,56 +102,15 @@
 		display: grid;
 		gap: 2.5rem;
 		margin-bottom: 2.5rem;
+
+		/* Mobile: 1 coluna */
+		grid-template-columns: 1fr;
 	}
 
 	.footer-section {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-	}
-
-	.footer-brand {
-		gap: 1.5rem;
-	}
-
-	.footer-logo {
-		height: 80px;
-		width: auto;
-		object-fit: contain;
-	}
-
-	.footer-description {
-		font-family: var(--font-tertiary);
-		font-size: 0.9rem;
-		line-height: 1.6;
-		opacity: 0.9;
-	}
-
-	.footer-social {
-		display: flex;
-		gap: 1rem;
-		margin-top: 0.5rem;
-	}
-
-	.social-link {
-		width: 45px;
-		height: 45px;
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.1);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.3s ease;
-		text-decoration: none;
-
-		&:hover {
-			background: var(--primary);
-			transform: translateY(-3px);
-		}
-	}
-
-	.social-icon {
-		font-size: 1.5rem;
 	}
 
 	.footer-title {
@@ -288,12 +232,8 @@
 		}
 
 		.footer-content {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr); /* 2 colunas */
 			gap: 3rem;
-		}
-
-		.footer-brand {
-			grid-column: 1 / -1;
 		}
 
 		.footer-bottom {
@@ -314,16 +254,8 @@
 		}
 
 		.footer-content {
-			grid-template-columns: 2fr 1fr 1fr 1.5fr;
+			grid-template-columns: 1fr 1fr 1.5fr; /* 3 colunas: links | serviços | contato */
 			gap: 4rem;
-		}
-
-		.footer-brand {
-			grid-column: auto;
-		}
-
-		.footer-description {
-			font-size: 0.95rem;
 		}
 
 		.footer-title {
