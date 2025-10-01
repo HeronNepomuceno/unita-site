@@ -20,9 +20,9 @@
 </script>
 
 <nav class="nav">
-	<button class="logo-link" onclick={closeMenu}>
+	<a href="#inicio" class="logo-link" onclick={closeMenu}>
 		<img class="logo" src="/unita.png" alt="Logo da Clínica"  />
-	</button>
+	</a>
 
 	<button class="menu-toggle" onclick={toggleMenu} aria-label="Toggle menu">
 		<span class="hamburger" class:open={isMenuOpen}></span>
@@ -119,7 +119,7 @@
 	.menu {
 		position: fixed;
 		top: 0;
-		right: -100%;
+		right: -280px;
 		width: 280px;
 		height: 100vh;
 		display: flex;
@@ -130,7 +130,7 @@
 		list-style: none;
 		background: linear-gradient(135deg, var(--tertiary) 0%, rgba(255, 255, 255, 0.98) 100%);
 		box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-		transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		transition: right 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		padding: 2rem;
 
 		&.open {
