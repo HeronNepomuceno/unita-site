@@ -52,18 +52,24 @@
 		</div>
 	</section>
 
-	<div class="about-stats">
-		<div class="stat">
-			<div class="stat-number">10+</div>
-			<div class="stat-label">Anos de experiência</div>
-		</div>
-		<div class="stat">
-			<div class="stat-number">5000+</div>
-			<div class="stat-label">Clientes satisfeitos</div>
-		</div>
-		<div class="stat">
-			<div class="stat-number">98%</div>
-			<div class="stat-label">Taxa de aprovação</div>
+	<div class="stats-container">
+		<div class="about-stats">
+			<div class="stat">
+				<div class="stat-number">10+</div>
+				<div class="stat-label">Anos de experiência</div>
+			</div>
+			<div class="stat">
+				<div class="stat-number">5000+</div>
+				<div class="stat-label">Clientes satisfeitos</div>
+			</div>
+			<div class="stat">
+				<div class="stat-number">98%</div>
+				<div class="stat-label">Taxa de aprovação</div>
+			</div>
+			<div class="stat">
+				<div class="stat-number">10+</div>
+				<div class="stat-label">Anos de experiência</div>
+			</div>
 		</div>
 	</div>
 
@@ -402,32 +408,48 @@
 		margin-bottom: 1.5rem;
 	}
 
-	.stat {
-		text-align: center;
-		padding: 1rem;
-		background: white;
-		border-radius: 15px;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-	}
-
 	.stat-number {
 		font-family: var(--font-primary);
-		font-size: 1.8rem;
+		font-size: 2rem;
 		color: var(--primary);
 		font-weight: bold;
 	}
 
 	.stat-label {
 		font-family: var(--font-tertiary);
-		font-size: 0.75rem;
+		font-size: 0.8rem;
 		color: var(--secondary);
-		opacity: 0.7;
-		margin-top: 0.3rem;
+		opacity: 0.8;
+		margin-top: 0.5rem;
 	}
 
 	.about-image {
 		width: 100%;
 		max-width: 400px;
+	}
+
+	// Stats Container
+	.stats-container {
+		background: rgba(255, 255, 255, 0.5);
+		padding: 1.5rem 3rem 1.5rem;
+		scroll-margin-top: 80px;
+	}
+
+	.about-stats {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.stat {
+		text-align: center;
+		padding: 1.5rem;
+		background: white;
+		border-radius: 15px;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease;
 	}
 
 	// Gallery Section
@@ -580,6 +602,10 @@
 		.contact-info {
 			grid-template-columns: repeat(2, 1fr);
 		}
+
+		.about-stats {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
 	// Desktop
@@ -617,5 +643,10 @@
 		.stat-label {
 			font-size: 0.85rem;
 		}
+
+		.about-stats {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
 	}
 </style>
