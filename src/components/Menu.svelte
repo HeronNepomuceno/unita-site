@@ -38,9 +38,9 @@
 					</a>
 				</li>
 			{/each}
-			<a href="#agendamento" class="menu-cta" onclick={closeMenu}>
-				Agendar consulta
-			</a>
+				<a class="btn-primary" href="https://wa.me/5586998678703?text={encodeURIComponent("Olá, gostaria de agendar uma consulta!")}" target="_blank" >
+					Agendar Consulta
+				</a>
 		</ul>
 	</div>
 </nav>
@@ -221,4 +221,26 @@
 		margin-top: 0;
 	}
 }
+
+	.btn-primary {
+		align-items: center;
+		display: flex;
+		font-family: var(--font-tertiary);
+		font-weight: 500;
+		padding: 1rem 2rem;
+		border-radius: 30px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		width: 100%;
+		max-width: 280px;
+		text-align: center;
+		background-color: var(--secondary);
+		color: var(--on-surface);
+		box-shadow: 0 4px 15px rgba(0, 64, 60, 0.3);
+
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(0, 64, 60, 0.4);
+		}
+	}
 </style>

@@ -1,23 +1,5 @@
 <script lang="ts">
-	import { services } from "../data/services";
-
-	const testimonials = [
-		{
-			name: 'Maria Silva',
-			text: 'Profissionais incríveis! Me senti acolhida e os resultados superaram minhas expectativas.',
-			rating: 5
-		},
-		{
-			name: 'Ana Paula',
-			text: 'A clínica é maravilhosa, ambiente tranquilo e tratamentos de altíssima qualidade.',
-			rating: 5
-		},
-		{
-			name: 'Juliana Costa',
-			text: 'Melhor experiência! Equipe atenciosa e resultados naturais e incríveis.',
-			rating: 5
-		}
-	];
+	import { services, testimonials } from "../data";
 </script>
 
 <div class="page">
@@ -32,12 +14,24 @@
 				Clínica de estética facial, corporal e terapias integrativas.
 			</p>
 			<div class="hero-actions">
-				<a href="#agendamento" class="btn-primary">Agendar Consulta</a>
-				<a href="#servicos" class="btn-secondary">Nossos Serviços</a>
+				<a class="btn-primary" href="https://wa.me/5586998678703?text={encodeURIComponent("Olá, gostaria de agendar uma consulta!")}" target="_blank" >
+						<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="whatsapp-icon">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.742.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+						</svg>
+					Agendar Consulta
+				</a>
+				<a 
+					class="btn-instagram" 
+					href="https://www.instagram.com/unita_teresina/" 
+					target="_blank" 
+					rel="noopener noreferrer"
+				>
+					Nos siga no Instagram
+				</a>
 			</div>
 		</div>
 		<div class="hero-image">
-			<img class="image-placeholder" src="/banner4.jpg" alt="Unitá" />
+			<img class="image-banner" src="/banner2.jpg" alt="Unitá" />
 		</div>
 	</section>
 
@@ -52,25 +46,26 @@
 			<p class="about-text">
 				Nossa missão é oferecer serviços de estética e bem-estar em um ambiente acolhedor, promovendo a consciência do autocuidado para quem busca saúde de  forma integrada.
 			</p>
-			<div class="about-stats">
-				<div class="stat">
-					<div class="stat-number">10+</div>
-					<div class="stat-label">Anos de experiência</div>
-				</div>
-				<div class="stat">
-					<div class="stat-number">5000+</div>
-					<div class="stat-label">Clientes satisfeitos</div>
-				</div>
-				<div class="stat">
-					<div class="stat-number">98%</div>
-					<div class="stat-label">Taxa de aprovação</div>
-				</div>
-			</div>
 		</div>
 		<div class="about-image">
 			<img class="image-placeholder" src="/logo.webp" alt="Unitá" />
 		</div>
 	</section>
+
+	<div class="about-stats">
+		<div class="stat">
+			<div class="stat-number">10+</div>
+			<div class="stat-label">Anos de experiência</div>
+		</div>
+		<div class="stat">
+			<div class="stat-number">5000+</div>
+			<div class="stat-label">Clientes satisfeitos</div>
+		</div>
+		<div class="stat">
+			<div class="stat-number">98%</div>
+			<div class="stat-label">Taxa de aprovação</div>
+		</div>
+	</div>
 
 	<!-- Services Section -->
 	<section id="servicos" class="services">
@@ -224,8 +219,10 @@
 		align-items: center;
 	}
 
-	.btn-primary,
-	.btn-secondary {
+	.btn-primary {
+		align-items: center;
+		display: flex;
+		justify-content: center;
 		font-family: var(--font-tertiary);
 		font-weight: 500;
 		padding: 1rem 2rem;
@@ -235,12 +232,17 @@
 		width: 100%;
 		max-width: 280px;
 		text-align: center;
-	}
-
-	.btn-primary {
 		background-color: var(--secondary);
 		color: var(--on-surface);
 		box-shadow: 0 4px 15px rgba(0, 64, 60, 0.3);
+		white-space: nowrap;
+
+		svg {
+			height: 24px;
+			width: 24px;
+			fill: var(--on-surface);
+			margin-right: 8px;
+		}
 
 		&:hover {
 			transform: translateY(-2px);
@@ -248,16 +250,39 @@
 		}
 	}
 
-	.btn-secondary {
-		background-color: transparent;
-		color: var(--secondary);
-		border: 2px solid var(--secondary);
+	.btn-instagram {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--font-tertiary);
+		font-weight: 500;
+		padding: 1rem 2rem;
+		max-height: 56px;
+		border-radius: 30px;
+		text-decoration: none;
+		color: #fff;
+		width: 100%;
+		max-width: 280px;
+		text-align: center;
+		gap: 0.5rem;
+		box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+		background: linear-gradient(270deg, #f58529, #dd2a7b, #8134af, #515bd4);
+		background-size: 800% 800%;
+		animation: gradientShift 8s ease infinite;
+		white-space: nowrap;
 
 		&:hover {
-			background-color: var(--secondary);
-			color: var(--on-surface);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(225, 48, 108, 0.5);
 		}
 	}
+
+	@keyframes gradientShift {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+
 
 	.hero-image {
 		width: 100%;
@@ -274,7 +299,21 @@
 		font-size: 5rem;
 		box-shadow: 0 10px 40px rgba(203, 146, 118, 0.3);
 		object-fit: cover;
+		height: 360px;
 	}
+
+	.image-banner {
+		aspect-ratio: 1;
+		background: linear-gradient(135deg, var(--primary), var(--tertiary));
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 5rem;
+		box-shadow: 0 10px 40px rgba(203, 146, 118, 0.3);
+		object-fit: cover;
+		height: 480px;
+	} 
 
 	// Section Shared Styles
 	section {
@@ -359,13 +398,6 @@
 		color: var(--secondary);
 		line-height: 1.8;
 		margin-bottom: 1.5rem;
-	}
-
-	.about-stats {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
-		margin-top: 2rem;
 	}
 
 	.stat {
