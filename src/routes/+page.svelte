@@ -186,7 +186,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 2rem 1.5rem;
+		padding: 1.5rem;
 		gap: 2rem;
 	}
 
@@ -273,6 +273,7 @@
 		justify-content: center;
 		font-size: 5rem;
 		box-shadow: 0 10px 40px rgba(203, 146, 118, 0.3);
+		object-fit: cover;
 	}
 
 	// Section Shared Styles
@@ -510,7 +511,6 @@
 
 
 	.map {
-		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 		display: flex;
 		justify-content: center;
 		margin-top: 32px;
@@ -552,7 +552,7 @@
 	@media (min-width: 969px) {
 		.hero {
 			flex-direction: row;
-			padding: 4rem 2rem;
+			padding: 0 2rem;
 		}
 
 		.hero-content {
