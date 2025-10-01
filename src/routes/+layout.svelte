@@ -56,14 +56,15 @@
 		);
 
 		height: 80px;
-		margin: 8px 0 32px 0;
-		position: sticky;
+		position: fixed;
 		top: 0;
 		left: 0;
+		width: 100%;
 		z-index: 1000;
 	}
 
 	main {
+		margin-top: 80px;
 		padding: 32px 16px;
 	}
 </style>
