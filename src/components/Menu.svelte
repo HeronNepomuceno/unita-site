@@ -11,8 +11,8 @@
 
 	const menuItems = [
 		{ label: 'Início', href: '#inicio' },
-		{ label: 'Serviços', href: '#servicos' },
 		{ label: 'Sobre', href: '#sobre' },
+		{ label: 'Serviços', href: '#servicos' },
 		{ label: 'Galeria', href: '#galeria' },
 		{ label: 'Depoimentos', href: '#depoimentos' },
 		{ label: 'Contato', href: '#contato' }

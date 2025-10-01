@@ -140,7 +140,6 @@
 		font-size: 0.9rem;
 		line-height: 1.6;
 		opacity: 0.9;
-		max-width: 350px;
 	}
 
 	.footer-social {
