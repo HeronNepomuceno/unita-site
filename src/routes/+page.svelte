@@ -95,7 +95,9 @@
 		<div class="gallery-grid">
 			{#each Array(6) as _, i}
 				<div class="gallery-item">
-					<img class="gallery-placeholder" src={`/banner${i + 1}.jpg`} alt="Unitá" />
+					<div class="gallery-placeholder">
+						<span>📸</span>
+					</div>
 				</div>
 			{/each}
 		</div>
