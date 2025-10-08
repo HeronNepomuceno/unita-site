@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div class="hero-image">
-			<img class="image-banner" src="/banner2.jpg" alt="Unitá" />
+			<img class="image-banner" src="/banner.webp" alt="Unitá" />
 		</div>
 	</section>
 
