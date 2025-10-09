@@ -101,9 +101,7 @@
 		<div class="gallery-grid">
 			{#each Array(6) as _, i}
 				<div class="gallery-item">
-					<div class="gallery-placeholder">
-						<span>📸</span>
-					</div>
+					<img class="gallery-placeholder" src={`gallery${i + 1}.webp`} alt="Unitá">
 				</div>
 			{/each}
 		</div>
