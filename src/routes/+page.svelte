@@ -1,5 +1,19 @@
 <script lang="ts">
 	import { services, testimonials } from "../data";
+
+	let imagesLoaded = $state({
+		banner: false,
+		logo: false,
+		gallery: Array(6).fill(false)
+	});
+
+	function handleImageLoad(type: string, index?: number) {
+		if (type === 'gallery' && index !== undefined) {
+			imagesLoaded.gallery[index] = true;
+		} else {
+			imagesLoaded[type as keyof typeof imagesLoaded] = true;
+		}
+	}
 </script>
 
 <div class="page">
@@ -31,11 +45,20 @@
 			</div>
 		</div>
 		<div class="hero-image">
-			<img class="image-banner" src="/banner.webp" alt="Unitá" />
+			<div class="image-container" class:loaded={imagesLoaded.banner}>
+				<img 
+					class="image-banner" 
+					src="/banner.webp" 
+					alt="Unitá"
+					loading="eager"
+					decoding="async"
+					onload={() => handleImageLoad('banner')}
+				/>
+			</div>
 		</div>
 	</section>
 
-		<!-- About Section -->
+	<!-- About Section -->
 	<section id="sobre" class="about">
 		<div class="about-content">
 			<h2 class="section-title">Sobre a Unitá</h2>
@@ -48,7 +71,16 @@
 			</p>
 		</div>
 		<div class="about-image">
-			<img class="image-placeholder" src="/logo.webp" alt="Unitá" />
+			<div class="image-container" class:loaded={imagesLoaded.logo}>
+				<img 
+					class="image-placeholder" 
+					src="/logo.webp" 
+					alt="Unitá"
+					loading="lazy"
+					decoding="async"
+					onload={() => handleImageLoad('logo')}
+				/>
+			</div>
 		</div>
 	</section>
 
@@ -101,7 +133,16 @@
 		<div class="gallery-grid">
 			{#each Array(6) as _, i}
 				<div class="gallery-item">
-					<img class="gallery-placeholder" src={`gallery${i + 1}.webp`} alt="Unitá">
+					<div class="image-container" class:loaded={imagesLoaded.gallery[i]}>
+						<img 
+							class="gallery-placeholder" 
+							src={`gallery${i + 1}.webp`} 
+							alt="Unitá - Trabalho {i + 1}"
+							loading="lazy"
+							decoding="async"
+							onload={() => handleImageLoad('gallery', i)}
+						/>
+					</div>
 				</div>
 			{/each}
 		</div>
@@ -178,6 +219,50 @@
 		width: 100%;
 		max-width: 100%;
 		overflow-x: hidden;
+	}
+
+	// Image Loading Effect
+	.image-container {
+		position: relative;
+		overflow: hidden;
+		background: linear-gradient(135deg, rgba(203, 146, 118, 0.1), rgba(179, 126, 101, 0.1));
+		
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, 
+				transparent, 
+				rgba(255, 255, 255, 0.3), 
+				transparent
+			);
+			animation: shimmer 1.5s infinite;
+		}
+
+		&.loaded::before {
+			display: none;
+		}
+
+		img {
+			opacity: 0;
+			transition: opacity 0.4s ease-in-out;
+		}
+
+		&.loaded img {
+			opacity: 1;
+		}
+	}
+
+	@keyframes shimmer {
+		0% {
+			left: -100%;
+		}
+		100% {
+			left: 100%;
+		}
 	}
 
 	// Hero Section
@@ -289,15 +374,17 @@
 		100% { background-position: 0% 50%; }
 	}
 
-
 	.hero-image {
 		width: 100%;
 		max-width: 400px;
+
+		.image-container {
+			border-radius: 50%;
+		}
 	}
 
 	.image-placeholder {
 		aspect-ratio: 1;
-		background: linear-gradient(135deg, var(--primary), var(--tertiary));
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -306,11 +393,11 @@
 		box-shadow: 0 10px 40px rgba(203, 146, 118, 0.3);
 		object-fit: cover;
 		height: 360px;
+		width: 100%;
 	}
 
 	.image-banner {
 		aspect-ratio: 1;
-		background: linear-gradient(135deg, var(--primary), var(--tertiary));
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -319,6 +406,7 @@
 		box-shadow: 0 10px 40px rgba(203, 146, 118, 0.3);
 		object-fit: cover;
 		height: 480px;
+		width: 100%;
 	} 
 
 	// Section Shared Styles
@@ -424,6 +512,10 @@
 	.about-image {
 		width: 100%;
 		max-width: 400px;
+
+		.image-container {
+			border-radius: 50%;
+		}
 	}
 
 	// Stats Container
@@ -467,12 +559,17 @@
 		aspect-ratio: 1;
 		overflow: hidden;
 		border-radius: 15px;
+
+		.image-container {
+			border-radius: 15px;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.gallery-placeholder {
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(135deg, var(--tertiary), var(--primary));
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -563,7 +660,6 @@
 		opacity: 0.7;
 	}
 
-
 	.map {
 		display: flex;
 		justify-content: center;
@@ -645,6 +741,5 @@
 		.about-stats {
 			grid-template-columns: repeat(4, 1fr);
 		}
-
 	}
 </style>
