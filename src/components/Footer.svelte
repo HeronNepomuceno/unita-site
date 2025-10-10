@@ -57,7 +57,7 @@
 			<div class="footer-contact">
 				<div class="contact-item">
 					<span class="contact-icon">📍</span>
-					<span>Avenida Senador Area Leão, 1736 sala 4 - Zona Leste</span>
+					<span>Avenida Senador Area Leão, 1736 sala 4 - Zona Leste - Bairro Jóquei</span>
 				</div>
 				<div class="contact-item">
 					<span class="contact-icon">📞</span>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="contact-item">
 					<span class="contact-icon">📧</span>
-					<span>contato@unita.com.br</span>
+					<span>unita.the@gmail.com</span>
 				</div>
 				<div class="contact-item">
 					<span class="contact-icon">🕐</span>

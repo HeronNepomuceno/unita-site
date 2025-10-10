@@ -181,7 +181,7 @@
 					<span class="contact-icon">📍</span>
 					<div>
 						<h4>Endereço</h4>
-						<p>Avenida Senador Area Leão, 1736 sala 4 - Zona Leste</p>
+						<p>Avenida Senador Area Leão, 1736 sala 4 - Zona Leste - Bairro Jóquei</p>
 					</div>
 				</div>
 				<div class="contact-item">
@@ -195,7 +195,7 @@
 					<span class="contact-icon">📧</span>
 					<div>
 						<h4>Email</h4>
-						<p>contato@unita.com.br</p>
+						<p>unita.the@gmail.com</p>
 					</div>
 				</div>
 				<div class="contact-item">
