@@ -87,8 +87,8 @@
 	<div class="stats-container">
 		<div class="about-stats">
 			<div class="stat">
-				<div class="stat-number">10+</div>
-				<div class="stat-label">Anos de experiência</div>
+				<div class="stat-number">16</div>
+				<div class="stat-label">Serviços ofertados</div>
 			</div>
 			<div class="stat">
 				<div class="stat-number">5000+</div>
