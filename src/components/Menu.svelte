@@ -20,9 +20,12 @@
 </script>
 
 <nav class="nav">
-	<a href="#inicio" class="logo-link" onclick={closeMenu}>
-		<img class="logo" src="/unita.png" alt="Logo da Clínica" />
-	</a>
+	<div class="logo-wrapper">
+		<a href="#inicio" class="logo-link" onclick={closeMenu}>
+			<img class="logo" src="/logo.png" alt="Logo da Clínica" />
+		</a>
+		<h1 class="logo-text">Unitá Estética</h1>
+	</div>
 
 	<button class="menu-toggle" onclick={toggleMenu} aria-label="Abrir menu">
 		<span class="hamburger" class:open={isMenuOpen}></span>
@@ -56,11 +59,25 @@
 	width: 100%;
 }
 
-.logo-link {
-	display: flex;
+.logo-wrapper {
 	align-items: center;
-	z-index: 1001;
+	display: flex;
+}
+
+.logo-text {
+	color: var(--secondary);
+	font-family: var(--font-primary);
+	font-size: 20px;
+	margin-left: 16px;
+}
+
+.logo-link {
+	align-items: center;
 	background: #f9f9fa;
+	border-radius: 999px;
+	display: flex;
+	padding: 8px;
+	z-index: 15;
 }
 
 .logo {
@@ -198,6 +215,11 @@
 
 /* ===== Desktop overrides ===== */
 @media (min-width: 969px) {
+
+	.logo-text {
+		display: none;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
@@ -227,6 +249,7 @@
 		display: flex;
 		font-family: var(--font-tertiary);
 		font-weight: 500;
+		font-size: 14px;
 		padding: 1rem 2rem;
 		border-radius: 30px;
 		text-decoration: none;
