@@ -198,6 +198,13 @@
 
 /* ===== Desktop overrides ===== */
 @media (min-width: 969px) {
+	.logo-link {
+		position: static;
+		top: auto;
+		left: auto;
+		transform: none;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
