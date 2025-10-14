@@ -26,7 +26,7 @@
 		</a>
 	</div>
 
-	<button class="menu-toggle" onclick={toggleMenu} aria-label="Abrir menu">
+	<button class="menu-toggle" onclick={toggleMenu} aria-label="Abrir menu" aria-expanded={isMenuOpen}>
 		<span class="hamburger" class:open={isMenuOpen}></span>
 	</button>
 
@@ -40,9 +40,11 @@
 					</a>
 				</li>
 			{/each}
+			<li class="menu-item">
 				<a class="btn-primary" href="https://wa.me/5586998678703?text={encodeURIComponent("Olá, gostaria de agendar uma consulta!")}" target="_blank" >
 					Agendar Consulta
 				</a>
+			</li>
 		</ul>
 	</div>
 </nav>
