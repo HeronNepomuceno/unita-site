@@ -22,7 +22,7 @@
 <nav class="nav">
 	<div class="logo-wrapper">
 		<a href="#inicio" class="logo-link" onclick={closeMenu}>
-			<img class="logo" src="/logo.png" alt="Logo da Clínica" />
+			<img class="logo" src="/logo-small.webp" alt="Logo da Clínica" />
 		</a>
 	</div>
 
