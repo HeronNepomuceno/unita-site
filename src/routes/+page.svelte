@@ -202,7 +202,7 @@
 					<span class="contact-icon">🕐</span>
 					<div>
 						<h4>Horário</h4>
-						<p>Seg - Sex: 8h às 18h</p>
+						<p>Seg. a sex.: 9h às 18h · Sáb.: 9h às 13h</p>
 					</div>
 				</div>
 			</div>

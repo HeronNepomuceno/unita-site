@@ -69,7 +69,7 @@
 				</div>
 				<div class="contact-item">
 					<span class="contact-icon">🕐</span>
-					<span>Seg - Sex: 8h às 18h</span>
+					<span>Seg. a sex.: 9h às 18h · Sáb.: 9h às 13h</span>
 				</div>
 			</div>
 		</div>
