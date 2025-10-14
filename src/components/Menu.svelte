@@ -24,7 +24,6 @@
 		<a href="#inicio" class="logo-link" onclick={closeMenu}>
 			<img class="logo" src="/logo.png" alt="Logo da Clínica" />
 		</a>
-		<h1 class="logo-text">Unitá Estética</h1>
 	</div>
 
 	<button class="menu-toggle" onclick={toggleMenu} aria-label="Abrir menu">
@@ -64,12 +63,6 @@
 	display: flex;
 }
 
-.logo-text {
-	color: var(--secondary);
-	font-family: var(--font-primary);
-	font-size: 20px;
-	margin-left: 16px;
-}
 
 .logo-link {
 	align-items: center;
@@ -77,7 +70,16 @@
 	border-radius: 999px;
 	display: flex;
 	padding: 8px;
+	position: absolute;
 	z-index: 15;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
 .logo {
@@ -194,32 +196,8 @@
 	}
 }
 
-.menu-cta {
-	font-family: var(--font-tertiary);
-	font-weight: 500;
-	font-size: 1rem;
-	color: var(--on-surface);
-	background-color: var(--secondary);
-	padding: 1rem 2rem;
-	border-radius: 30px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 15px rgba(203, 146, 118, 0.3);
-	margin-top: 2rem;
-
-	&:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(0, 64, 60, 0.3);
-	}
-}
-
 /* ===== Desktop overrides ===== */
 @media (min-width: 969px) {
-
-	.logo-text {
-		display: none;
-	}
-
 	.menu-toggle {
 		display: none;
 	}
@@ -237,10 +215,6 @@
 	.menu {
 		flex-direction: row;
 		gap: 2.5rem;
-	}
-
-	.menu-cta {
-		margin-top: 0;
 	}
 }
 
